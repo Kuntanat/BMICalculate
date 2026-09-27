@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMICalculate</string>
+
+    <string name="bmi_title">Body Mass Index</string>
+    <string name="weight">Weight (kg)</string>
+    <string name="height">Height (cm)</string>
+    <string name="bmi">Body Mass Index</string>
+    <string name="result">Result</string>
+    <string name="calculate">Calculate</string>
+
+    <string name="weight_hint">Weight</string>
+    <string name="height_hint">Height</string>
+
+    <string name="error_empty">Please fill in all fields</string>
+    <string name="error_height_zero">Height must be greater than 0</string>
+    <string name="result_underweight">Underweight</string>
+    <string name="result_normal">Normal</string>
+    <string name="result_overweight">Overweight</string>
+    <string name="result_obese">Obese</string>
+    <string name="error_invalid_number">Invalid number format</string>
+</resources>

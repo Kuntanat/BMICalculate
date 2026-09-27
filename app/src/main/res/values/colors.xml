@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="hint_color">#6D6D6D</color>
+
+    <color name="bmi_box_color">#E0E0E0</color>
+    <color name="result_box_color">#EEF4DD</color>
+    <color name="button_color">#FFFFFF</color>
 </resources>
