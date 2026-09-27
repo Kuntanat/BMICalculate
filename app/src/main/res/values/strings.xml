@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BMICalculate</string>
+    <string name="app_name">BMICalculator</string>
+    <string name="weight_label">Weight (kg)</string>
+    <string name="height_label">Height (cm)</string>
+    <string name="calculate_btn">Calculate</string>
 
     <string name="bmi_title">ค่าดัชนีมวลกาย</string>
     <string name="weight">น้ำหนัก (กิโลกรัม)</string>
@@ -12,4 +15,11 @@
     <string name="weight_hint">น้ำหนัก</string>
     <string name="height_hint">ส่วนสูง</string>
 
+    <string name="error_empty">Please fill in all fields</string>
+    <string name="error_height_zero">Height must be greater than 0</string>
+    <string name="result_underweight">Underweight</string>
+    <string name="result_normal">Normal</string>
+    <string name="result_overweight">Overweight</string>
+    <string name="result_obese">Obese</string>
+    <string name="error_invalid_number">Invalid number format</string>
 </resources>

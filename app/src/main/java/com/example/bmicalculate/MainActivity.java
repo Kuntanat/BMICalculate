@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editWeight, editHeight;
     private TextView tvBmiValue, tvResult;
     private Button btnCalculate;
-    private DecimalFormat formatter = new DecimalFormat("#,###.##"); //[cite: 1]
+    private DecimalFormat formatter = new DecimalFormat("#,###.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         tvResult = findViewById(R.id.tvResult);
         btnCalculate = findViewById(R.id.btnCalculate);
 
-        editWeight.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(8, 2)}); //[cite: 1]
-        editHeight.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(8, 2)}); //[cite: 1]
+        editWeight.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(8, 2)});
+        editHeight.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(8, 2)});
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         String heightStr = editHeight.getText().toString();
 
         if (weightStr.isEmpty() || heightStr.isEmpty()) {
-            Toast.makeText(this, "กรุณากรอกข้อมูลให้ครบถ้วน", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_empty), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             double heightCm = Double.parseDouble(heightStr);
 
             if (heightCm <= 0) {
-                Toast.makeText(this, "ส่วนสูงต้องมากกว่า 0", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.error_height_zero), Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -68,25 +68,25 @@ public class MainActivity extends AppCompatActivity {
             String formattedBmiStr = formatter.format(bmi);
             tvBmiValue.setText(formattedBmiStr);
 
-            double roundedBmi = Double.parseDouble(formattedBmiStr);
+            double roundedBmi = Double.parseDouble(formattedBmiStr.replace(",", ""));
 
             if (roundedBmi < 18.5) {
-                tvResult.setText("น้ำหนักต่ำกว่าเกณฑ์");
+                tvResult.setText(getString(R.string.result_underweight));
             } else if (roundedBmi < 25) {
-                tvResult.setText("ปกติ");
+                tvResult.setText(getString(R.string.result_normal));
             } else if (roundedBmi < 30) {
-                tvResult.setText("น้ำหนักเกิน");
+                tvResult.setText(getString(R.string.result_overweight));
             } else {
-                tvResult.setText("โรคอ้วน");
+                tvResult.setText(getString(R.string.result_obese));
             }
 
         } catch (NumberFormatException e) {
-            Toast.makeText(this, "รูปแบบตัวเลขไม่ถูกต้อง", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_invalid_number), Toast.LENGTH_SHORT).show();
         }
     }
 }
 
-class DecimalDigitsInputFilter implements InputFilter { //[cite: 1]
+class DecimalDigitsInputFilter implements InputFilter {
     private Pattern mPattern;
 
     DecimalDigitsInputFilter(int digits, int digitsAfterZero) {
