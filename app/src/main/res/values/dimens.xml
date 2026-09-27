@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="title_text_size">24sp</dimen>
+    <dimen name="normal_text_size">18sp</dimen>
+    <dimen name="input_width">120dp</dimen>
+    <dimen name="touch_height">48dp</dimen>
+    <dimen name="row_margin">12dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
+
+    <dimen name="border_width">2dp</dimen>
+    <dimen name="button_margin_top">24dp</dimen>
+</resources>
