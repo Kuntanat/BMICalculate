@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BMICalculate</string>
 
@@ -10,8 +11,5 @@
 
     <string name="weight_hint">น้ำหนัก</string>
     <string name="height_hint">ส่วนสูง</string>
-    <color name="bmi_box_color">#E0E0E0</color>
-    <color name="result_box_color">#EEF4DD</color>
-    <color name="button_color">#FFFFFF</color>
 
 </resources>
